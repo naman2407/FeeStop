@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FeeStop | Full Payment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/bootstrap_dropdown.css">
+    <link rel="stylesheet" href="CSS/bootstrap_time.css">
+    <link rel="stylesheet" href="CSS/style_payment.css">
+    <!-- fav icon -->
+    <link rel="icon" href="img/favicon.png" type="image/png" sizes="16x16">
+</head>
+
+<body>
+    <script src="js/jquery-1.12.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.userTimeout.js"></script>
+    <script type="text/javascript">
+        //JQuery Plugin for Session Timeout//
+                $(document).userTimeout({
+                    logouturl: 'index.html',
+                    session: 30000
+                });
+        
+                //JSON dropdown plugin//
+                $(document).ready(function() {
+        
+                    load_json_data('School');
+        
+                    function load_json_data(id, parent_id) {
+                        var html_code = '';
+                        $.getJSON('School_Course.json', function(data) {
+        
+                            html_code += '<option value="">Select ' + id + '</option>';
+                            $.each(data, function(key, value) {
+                                if (id == 'School') {
+                                    if (value.parent_id == '0') {
+                                        html_code += '<option value="' + value.id + '">' + value.name + '</option>';
+                                    }
+                                } else {
+                                    if (value.parent_id == parent_id) {
+                                        html_code += '<option value="' + value.id + '">' + value.name + '</option>';
+                                    }
+                                }
+                            });
+                            $('#' + id).html(html_code);
+                        });
+        
+                    }
+        
+                    $(document).on('change', '#School', function() {
+                        var School_id = $(this).val();
+                        if (School_id != '') {
+                            load_json_data('Degree', School_id);
+                        } else {
+                            $('#Degree').html('<option value="">Select Course</option>');
+                            $('#Course').html('<option value="">Select Course</option>');
+                        }
+                    });
+                    $(document).on('change', '#Degree', function() {
+                        var Degree_id = $(this).val();
+                        if (Degree_id != '') {
+                            load_json_data('Course', Degree_id);
+                        } else {
+                            $('#Course').html('<option value="">Select Degree</option>');
+                        }
+                    });
+                });
+    </script>
+    <!-- Back Button -->
+    <div class="wrap"> <a href="modeofpayment.html" class="hover">Back</a>
+    </div>
+    <br>
+    <form class="steps" accept-charset="UTF-8" enctype="multipart/form-data" novalidate="">
+        <ul id="progressbar">
+            <li class="active">School & Installment Type</li>
+            <li>Payer Information</li>
+            <li>Student Information</li>
+            <li>Card Information</li>
+            <li>Thank You</li>
+        </ul>
+        <!-- Form -->
+        <fieldset>
+            <h2 class="fs-title">School & Installment Type</h2>
+            <h3 class="fs-subtitle">Please Select the School to Pay Fees with the Type of Installment</h3>
+            <!-- Step 1/Dropdowns -->
+            <!-- dropdowns -->
+            <div>
+                <label for="firstname-99a6d115-5e68-4355-a7d0-529207feb0b3_2983">Select a School *</label>
+                <select name="School" id="School" class="form-control input-lg" required="required" data-rule-required="true" data-msg-required="Please Select a School">
+                    <option value="">Select School</option>
+                </select> <span class="error1" style="display: none;">
+              <i class="error-log fa fa-exclamation-triangle"></i>
+          </span>
+            </div>
+            <div>
+                <label for="firstname-99a6d115-5e68-4355-a7d0-529207feb0b3_2983">Select a Degree *</label>
+                <select name="Degree" id="Degree" class="form-control input-lg" required="required" data-rule-required="true" data-msg-required="Please Select a Degree">
+                    <option value="">Select Degree</option>
+                </select> <span class="error1" style="display: none;">
+              <i class="error-log fa fa-exclamation-triangle"></i>
+          </span>
+            </div>
+            <div>
+                <label for="Type of Installment">Type of Installment *</label>
+                <select name="type" class="form-control input-lg" required="required" data-rule-required="true" data-msg-required="Please Select the Type of Installment">
+                    <option value="">Select the Type of Installment</option>
+                    <option>Monthly</option>
+                    <option>Biweekly</option>
+                    <option>Weekly</option>
+                </select> <span class="error1" style="display: none;">
+              <i class="error-log fa fa-exclamation-triangle"></i>
+          </span>
+            </div>
+            <input type="button" name="next" class="next action-button" value="Next" />
+        </fieldset>
+        <!-- Step 2 -->
+        <fieldset>
+            <h2 class="fs-title">PAYER INFORMATION</h2>
+            <h3 class="fs-subtitle">Please Enter the Payer's Information</h3>
+            <!-- Form Fields -->
+            <div>
+                <label>First Name *</label>
+                <input name="firstname" required="required" type="text" data-rule-required="true" data-msg-required="Please Enter Your First Name"> <span class="error1" style="display: none;">
+              <i class="error-log fa fa-exclamation-triangle"></i>
+          </span>
+            </div>
+            <div>
+                <label>Last Name *</label>
+                <input name="lastname" required="required" type="text" data-rule-required="true" data-msg-required="Please Enter Your Last Name"> <span class="error1" style="display: none;">
+              <i class="error-log fa fa-exclamation-triangle"></i>
+          </span>
+            </div>
+            <div>
+                <label>Address *</label>
+                <input name="address" required="required" type="text" data-rule-required="true" data-msg-required="Please Enter Your Address"> <span class="error1" style="display: none;">
+              <i class="error-log fa fa-exclamation-triangle"></i>
+          </span>
+            </div>
+            <div>
+                <label>City *</label>
+                <input name="City" required="required" type="text" data-rule-required="true" data-msg-required="Please Enter Your City"> <span class="error1" style="display: none;">
+              <i class="error-log fa fa-exclamation-triangle"></i>
+          </span>
+            </div>
+            <div>
+                <label>State *</label>
+                <input name="State" required="required" type="text" data-rule-required="true" data-msg-required="Please Enter Your State"> <span class="error1" style="display: none;">
+              <i class="error-log fa fa-exclamation-triangle"></i>
+          </span>
+            </div>
+            <div>
+                <label>Postal Code *</label>
+                <input name="Postal" required="required" type="number" pattern="\d*" maxlength="6" data-rule-required="true" data-msg-required="Please Enter Your Postal Code"> <span class="error1" style="display: none;">
+              <i class="error-log fa fa-exclamation-triangle"></i>
+          </span>
+            </div>
+            <div>
+                <label>Email ID *</label>
+                <input name="email" required="required" type="email" data-rule-required="true" data-msg-required="Please Enter Your Email ID"> <span class="error1" style="display: none;">
+              <i class="error-log fa fa-exclamation-triangle"></i>
+          </span>
+            </div>
+            <div>
+                <label>Contact Number *</label>
+                <input name="contact" required="required" type="number" pattern="\d*" maxlength="10" data-rule-required="true" data-msg-required="Please Enter Your Contact Number"> <span class="error1" style="display: none;">
+              <i class="error-log fa fa-exclamation-triangle"></i>
+          </span>
+            </div>
+            <input type="button" name="previous" class="previous action-button" value="Back" />
+            <input type="button" name="next" class="next action-button" value="Next" />
+        </fieldset>
+        <!-- Step 3 -->
+        <fieldset>
+            <h2 class="fs-title">STUDENT INFORMATION</h2>
+            <h3 class="fs-subtitle">Please Enter the Student's Information</h3>
+            <!-- Form Fields -->
+            <div>
+                <label>Student ID *</label>
+                <input name="id" required="required" type="number" data-rule-required="true" data-msg-required="Please Enter Student's ID"> <span class="error1" style="display: none;">
+              <i class="error-log fa fa-exclamation-triangle"></i>
+          </span>
+            </div>
+            <div>
+                <label>First Name of the Student *</label>
+                <input name="firstnames" required="required" type="text" data-rule-required="true" data-msg-required="Please Enter First Name of the Student"> <span class="error1" style="display: none;">
+              <i class="error-log fa fa-exclamation-triangle"></i>
+          </span>
+            </div>
+            <div>
+                <label>Middle Name of the Student</label>
+                <input name="middlenames" type="text" value="">
+            </div>
+            <div>
+                <label>Last Name of the student *</label>
+                <input name="lastnames" required="required" type="text" data-rule-required="true" data-msg-required="Please Enter Last Name of the Student"> <span class="error1" style="display: none;">
+              <i class="error-log fa fa-exclamation-triangle"></i>
+          </span>
+            </div>
+            <div>
+                <label>Date of Birth *</label>
+                <input name="dob" required="required" type="date" data-rule-required="true" data-msg-required="Please Enter the Student's Date of Birth"> <span class="error1" style="display: none;">
+              <i class="error-log fa fa-exclamation-triangle"></i>
+          </span>
+            </div>
+            <div>
+                <label>Student Email ID *</label>
+                <input name="emailid_student" required="required" type="email" data-rule-required="true" data-msg-required="Please Enter Student's Email ID"> <span class="error1" style="display: none;">
+              <i class="error-log fa fa-exclamation-triangle"></i>
+          </span>
+            </div>
+            <input type="button" name="previous" class="previous action-button" value="Back" />
+            <input type="button" name="next" class="next action-button" value="Next" />
+        </fieldset>
+        <!-- Step 4 -->
+        <fieldset>
+            <h2 class="fs-title">CARD INFORMATION</h2>
+            <h3 class="fs-subtitle">Please Enter the Card Details to Pay the Fees</h3>
+            <!-- card payment -->
+            <div>
+                <header class='headerpayment'>
+                    <h1>Please Select a Card</h1>
+                    <div class='card-type'>
+                        <a class='card active' href='#'>
+                            <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/Amex.png'>
+                        </a>
+                        <a class='card' href='#'>
+                            <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/Discover.png'>
+                        </a>
+                        <a class='card' href='#'>
+                            <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/Visa.png'>
+                        </a>
+                        <a class='card' href='#'>
+                            <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/MC.png'>
+                        </a>
+                    </div>
+                </header>
+                <br>
+                <!-- Form Fields -->
+                <div>
+                    <label>Name on the Card *</label>
+                    <input name="nameonthecard" required="required" type="Text" data-rule-required="true" data-msg-required="Please Enter the Cardholder's Name"> <span class="error1" style="display: none;">
+              <i class="error-log fa fa-exclamation-triangle"></i>
+          </span>
+                </div>
+                <div>
+                    <label>Card Number *</label>
+                    <input name="cardnumber" required="required" type="number" maxlength="16" data-rule-required="true" data-msg-required="Please Enter the Card Number"> <span class="error1" style="display: none;">
+              <i class="error-log fa fa-exclamation-triangle"></i>
+          </span>
+                </div>
+                <label>Expiry Date *</label>
+                <input name="lastnames" required="required" type="month" data-rule-required="true" data-msg-required="Please Enter the Expiry Date"> <span class="error1" style="display: none;">
+              <i class="error-log fa fa-exclamation-triangle"></i>
+          </span>
+            </div>
+            <div>
+                <label>Security Code *</label>
+                <input name="dob" required="required" type="number" maxlength="4" data-rule-required="true" data-msg-required="Please Enter the Security Code"> <span class="error1" style="display: none;">
+              <i class="error-log fa fa-exclamation-triangle"></i>
+          </span>
+            </div>
+            <!-- check fields -->
+            <p class="autoterms">
+                <input name="check" type="checkbox" required="required" data-rule-required="true" data-msg-required="Please Accept the Terms and Conditions"> <span class="error2" style="display: none;">
+              <i class="error-log fa fa-exclamation-triangle"></i>
+          </span><a class="btnterms trigger" href="javascript:;">I Agree to the Terms & Conditions & Privacy Policy.</a>
+                <br>
+                <input name="check" type="checkbox">Activate Autopay
+                <br>
+                <br>
+            </p>
+            <input type="button" name="previous" class="previous action-button" value="Back" />
+            <input type="button" name="next" class="next action-button" value="Pay Fees" />
+        </fieldset>
+        <!-- Thank You Step -->
+        <fieldset>
+            <h2 class="fs-title">Thank You!</h2>
+            <h3 class="fs-subtitle">Your Payment Has Been Made!</h3>
+            <input type="button" class="Homepage action-button1" value="Continue to Homepage" onclick="window.location.href='homepage.html'">
+        </fieldset>
+        <!-- Terms and Conditions Popup -->
+        <div class="modal1-wrapper">
+            <div class="modal1">
+                <div class="head">
+                    <h3 class="termsheading">Terms & Conditions</h3>
+                    <a class="btn-close trigger" href="javascript:;"></a>
+                </div>
+                <div class="content">The Service allows users to pay bills they receive from businesses outside their home country and permits international students and patients, their family members or other third parties to pay their tuition, room and board, or other fees owed to secondary schools, colleges, and universities, or pay their medical bills and associated fees to hospitals and associated healthcare facilities, for which FeeStop Payments Corporation, FeeStop Healthcare Corporation and affiliates serve as payment agents (each payment recipient, a "Designated Entity" ). We may work with local banks, foreign exchange providers, and other third-party service providers (each, a "Service Provider" ) to receive and/or settle payments to a Designated Entity’s bank account.</div>
+            </div>
+            <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+            <script src='https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js'></script>
+            <script src='http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
+            <script src="js/payment.js"></script>
+</body>
+
+</html>

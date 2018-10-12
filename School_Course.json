@@ -1,0 +1,502 @@
+[
+  {
+    "id": "1",
+    "name": "Academy of Art University",
+    "parent_id": "0"
+  },
+  {
+    "id": "2",
+    "name": "Arkansas Tech University",
+    "parent_id": "0"
+  },
+  {
+    "id": "3",
+    "name": "California College of the Arts",
+    "parent_id": "0"
+  },
+  {
+    "id": "4",
+    "name": "California State University - Fullerton",
+    "parent_id": "0"
+  },
+  {
+    "id": "5",
+    "name": "Cornell University",
+    "parent_id": "0"
+  },
+  {
+    "id": "6",
+    "name": "Florida Institute of Technology",
+    "parent_id": "0"
+  },
+  {
+    "id": "7",
+    "name": "Georgia Institute of Technology",
+    "parent_id": "0"
+  },
+  {
+    "id": "8",
+    "name": "Harvard University",
+    "parent_id": "0"
+  },
+  {
+    "id": "9",
+    "name": "Illinois Institute of Technology",
+    "parent_id": "0"
+  },
+  {
+    "id": "10",
+    "name": "Johns Hopkins University",
+    "parent_id": "0"
+  },
+  {
+    "id": "11",
+    "name": "Pratt Institute",
+    "parent_id": "0"
+  },
+  {
+    "id": "12",
+    "name": "Savannah College of Art and Design",
+    "parent_id": "0"
+  },
+  {
+    "id": "13",
+    "name": "Stanford University",
+    "parent_id": "0"
+  },
+  {
+    "id": "14",
+    "name": "University of Texas - Austin",
+    "parent_id": "0"
+  },
+  {
+    "id": "15",
+    "name": "University of Wisconsin - Milwaukee",
+    "parent_id": "0"
+  },
+  {
+    "id": "16",
+    "name": "Virginia Tech",
+    "parent_id": "0"
+  },
+  {
+    "id": "17",
+    "name": "Washington State University",
+    "parent_id": "0"
+  },
+  {
+    "id": "18",
+    "name": "Worcester State University",
+    "parent_id": "0"
+  },
+  {
+    "id": "19",
+    "name": "Yale University",
+    "parent_id": "0"
+  },
+  {
+    "id": "20",
+    "name": "York University",
+    "parent_id": "0"
+  },
+  {
+    "id": "21",
+    "name": "MFA Fashion",
+    "parent_id": "1"
+  },
+  {
+    "id": "22",
+    "name": "BFA Game Development",
+    "parent_id": "1"
+  },
+  {
+    "id": "23",
+    "name": "MFA Game Development",
+    "parent_id": "1"
+  },
+  {
+    "id": "24",
+    "name": "Associate of Arts Visual Development",
+    "parent_id": "1"
+  },
+  {
+    "id": "25",
+    "name": "BA Graphic Design",
+    "parent_id": "2"
+  },
+  {
+    "id": "26",
+    "name": "BS in Nursing",
+    "parent_id": "2"
+  },
+  {
+    "id": "27",
+    "name": "Master of Business Administration",
+    "parent_id": "2"
+  },
+  {
+    "id": "28",
+    "name": "Master of Engineering in Mechanical Engineering",
+    "parent_id": "2"
+  },
+  {
+    "id": "29",
+    "name": "BFA Ceramics",
+    "parent_id": "3"
+  },
+  {
+    "id": "30",
+    "name": "BFA Furniture",
+    "parent_id": "3"
+  },
+  {
+    "id": "31",
+    "name": "MA Curatorial Practice",
+    "parent_id": "3"
+  },
+  {
+    "id": "32",
+    "name": "MFA Writing",
+    "parent_id": "3"
+  },
+  {
+    "id": "33",
+    "name": "BA Communications",
+    "parent_id": "4"
+  },
+  {
+    "id": "34",
+    "name": "BS Computer Engineering",
+    "parent_id": "4"
+  },
+  {
+    "id": "35",
+    "name": "MA Applied Mathematics",
+    "parent_id": "4"
+  },
+  {
+    "id": "36",
+    "name": "MS Statistics",
+    "parent_id": "4"
+  },
+  {
+    "id": "37",
+    "name": "BS Agriculture",
+    "parent_id": "5"
+  },
+  {
+    "id": "38",
+    "name": "BS Biological Engineering",
+    "parent_id": "5"
+  },
+  {
+    "id": "39",
+    "name": "BS Computer Science",
+    "parent_id": "5"
+  },
+  {
+    "id": "40",
+    "name": "Masters in Business Administration - International Business",
+    "parent_id": "5"
+  },
+  {
+    "id": "41",
+    "name": "BS Software Engineering",
+    "parent_id": "6"
+  },
+  {
+    "id": "42",
+    "name": "BS Chemical",
+    "parent_id": "6"
+  },
+  {
+    "id": "43",
+    "name": "MS Computer Science",
+    "parent_id": "6"
+  },
+  {
+    "id": "44",
+    "name": "MS Chemical",
+    "parent_id": "6"
+  },
+  {
+    "id": "45",
+    "name": "BS Computational Media",
+    "parent_id": "7"
+  },
+  {
+    "id": "46",
+    "name": "BS Industrial Design",
+    "parent_id": "7"
+  },
+  {
+    "id": "47",
+    "name": "MS HCI",
+    "parent_id": "7"
+  },
+  {
+    "id": "48",
+    "name": "MS Operations Research",
+    "parent_id": "7"
+  },
+  {
+    "id": "49",
+    "name": "BS Digital Media",
+    "parent_id": "8"
+  },
+  {
+    "id": "50",
+    "name": "LLB Corporate Law",
+    "parent_id": "8"
+  },
+  {
+    "id": "51",
+    "name": "MS Architecture",
+    "parent_id": "8"
+  },
+  {
+    "id": "52",
+    "name": "Maters in Corporate Law",
+    "parent_id": "8"
+  },
+  {
+    "id": "53",
+    "name": "BS Business Administration",
+    "parent_id": "9"
+  },
+  {
+    "id": "54",
+    "name": "BS Biology/BS Psychology",
+    "parent_id": "9"
+  },
+  {
+    "id": "55",
+    "name": "LLM Financial Service Law",
+    "parent_id": "9"
+  },
+  {
+    "id": "56",
+    "name": "Master of Design + MBA Dual Degree",
+    "parent_id": "9"
+  },
+  {
+    "id": "57",
+    "name": "BS Civil Engineering",
+    "parent_id": "10"
+  },
+  {
+    "id": "58",
+    "name": "BS Computational Medicine",
+    "parent_id": "10"
+  },
+  {
+    "id": "59",
+    "name": "MS Biomedical Engineering",
+    "parent_id": "10"
+  },
+  {
+    "id": "60",
+    "name": "Doctoral Chemical & Biomolecular Engineering",
+    "parent_id": "10"
+  },
+  {
+    "id": "61",
+    "name": "BS Architecture",
+    "parent_id": "11"
+  },
+  {
+    "id": "62",
+    "name": "BS Construction Management",
+    "parent_id": "11"
+  },
+  {
+    "id": "63",
+    "name": "MS Information Experince Design",
+    "parent_id": "11"
+  },
+  {
+    "id": "64",
+    "name": "MS Library Science",
+    "parent_id": "11"
+  },
+  {
+    "id": "65",
+    "name": "BA Advertising",
+    "parent_id": "12"
+  },
+  {
+    "id": "66",
+    "name": "BFA Animation",
+    "parent_id": "12"
+  },
+  {
+    "id": "67",
+    "name": "MA Cinema Studies",
+    "parent_id": "12"
+  },
+  {
+    "id": "68",
+    "name": "MFA Painting",
+    "parent_id": "12"
+  },
+  {
+    "id": "69",
+    "name": "BA Anthropology",
+    "parent_id": "13"
+  },
+  {
+    "id": "70",
+    "name": "BA Communication",
+    "parent_id": "13"
+  },
+  {
+    "id": "71",
+    "name": "MS Computer Engineering",
+    "parent_id": "13"
+  },
+  {
+    "id": "72",
+    "name": "Masters in Business Administration",
+    "parent_id": "13"
+  },
+  {
+    "id": "73",
+    "name": "BA Geography",
+    "parent_id": "14"
+  },
+  {
+    "id": "74",
+    "name": "BS Psychology",
+    "parent_id": "14"
+  },
+  {
+    "id": "75",
+    "name": "MArch Architecture - Post Professional",
+    "parent_id": "14"
+  },
+  {
+    "id": "76",
+    "name": "Ph.D. Community & Regional Planning",
+    "parent_id": "14"
+  },
+  {
+    "id": "77",
+    "name": "BBA Accounting",
+    "parent_id": "15"
+  },
+  {
+    "id": "78",
+    "name": "BS Computer Science",
+    "parent_id": "15"
+  },
+  {
+    "id": "79",
+    "name": "MS Professional Accounting",
+    "parent_id": "15"
+  },
+  {
+    "id": "80",
+    "name": "MS Information Science",
+    "parent_id": "15"
+  },
+  {
+    "id": "81",
+    "name": "Bachelor of Architecture",
+    "parent_id": "16"
+  },
+  {
+    "id": "82",
+    "name": "BS Management",
+    "parent_id": "16"
+  },
+  {
+    "id": "83",
+    "name": "MS Information Technology",
+    "parent_id": "16"
+  },
+  {
+    "id": "84",
+    "name": "MS Software Engineering",
+    "parent_id": "16"
+  },
+  {
+    "id": "85",
+    "name": "BS Construction Engineering",
+    "parent_id": "17"
+  },
+  {
+    "id": "86",
+    "name": "BS Mechanical Engineering",
+    "parent_id": "17"
+  },
+  {
+    "id": "87",
+    "name": "Doctor Of Philosophy In Business Administration – Management",
+    "parent_id": "17"
+  },
+  {
+    "id": "88",
+    "name": "Doctor Of Philosophy In Education – Cultural Studies And Social Thought In Education",
+    "parent_id": "17"
+  },
+  {
+    "id": "89",
+    "name": "BA Communication",
+    "parent_id": "18"
+  },
+  {
+    "id": "90",
+    "name": "BS Early Childhood Education",
+    "parent_id": "18"
+  },
+  {
+    "id": "91",
+    "name": "MA English",
+    "parent_id": "18"
+  },
+  {
+    "id": "92",
+    "name": "MS Speech-Language Pathology",
+    "parent_id": "18"
+  },
+  {
+    "id": "93",
+    "name": "BA History of Art",
+    "parent_id": "19"
+  },
+  {
+    "id": "94",
+    "name": "BS Physics",
+    "parent_id": "19"
+  },
+  {
+    "id": "95",
+    "name": "MFA Design",
+    "parent_id": "19"
+  },
+  {
+    "id": "96",
+    "name": "Doctor of Fine Arts",
+    "parent_id": "19"
+  },
+  {
+    "id": "97",
+    "name": "BA African Studies",
+    "parent_id": "20"
+  },
+  {
+    "id": "98",
+    "name": "BSc Applied Mathematics",
+    "parent_id": "20"
+  },
+  {
+    "id": "99",
+    "name": "BEng Civil Engineering",
+    "parent_id": "20"
+  },
+  {
+    "id": "100",
+    "name": "MSc Biology",
+    "parent_id": "20"
+  }
+]
